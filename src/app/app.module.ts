@@ -9,12 +9,14 @@ import {ProductService} from "./shared/product.service";
 import {Product2Component} from './product2/product2.component';
 import {LoggerService} from "./shared/logger.service";
 import {AnotherProductService} from "./shared/another-product.service";
+import { BindComponent } from './bind/bind.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     Product1Component,
-    Product2Component
+    Product2Component,
+    BindComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +35,7 @@ import {AnotherProductService} from "./shared/another-product.service";
     deps: [LoggerService, "APP_CONFIG"]
   }, LoggerService,
     {
-      provide: "APP_CONFIG", useValue: {isDev:false}
+      provide: "APP_CONFIG", useValue: {isDev: false}
     }],
   bootstrap: [AppComponent]
 })
