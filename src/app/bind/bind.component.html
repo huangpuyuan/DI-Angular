@@ -1,0 +1,50 @@
+<div class="panel panel-default">
+  <div class="panel-heading">数据绑定</div>
+  <div class="panel-body">
+    <span>Angular里面的事件绑定： </span>
+    <button class="btn btn-default" (click)="doOnClick($event)">点我</button>
+    <hr>
+    <p>注意点1：<b>差值表达式</b>和<b>属性绑定</b>是相同的东西。如下示例</p>
+    <div class="row">
+      <div class="col-md-4">
+        <p>属性绑定1: <code>&lt;img [src]="imgUrl" /&gt;</code></p>
+        <img [src]="imgUrl"/>
+      </div>
+      <div class="col-md-4">
+        <p>属性绑定2: <code> &lt;img src=<span>"{{</span>imgUrl<span>}}"</span>/&gt;</code></p>
+        <img src="{{imgUrl}}"/>
+      </div>
+      <div class="col-md-4">
+        <p>数据绑定3：html属性和DOM属性</p>
+        <input value="Tom" (input)="doInput($event)">
+        <button class="btn btn-default" disabled>点我</button>
+        <hr>
+        <p>html属性和DOM属性的区别，模板绑定是通过DOM属性和事件来工作的不是HTML属性</p>
+        <p>插值表达式是DOM属性绑定</p>
+      </div>
+      <div class="col-md-6">
+        <p>数据绑定4：<br>HTML属性绑定: <code>[attr.colspan]="tableColspan"</code></p>
+        <p>CSS类绑定：<code>[class] [class.specail] [ngClass]="{{ '{' }}aaa:isA,bbb:isB{{ '}' }}"</code></p>
+        <p>样式属性绑定：<code> [style.specail]="isSpecial?'red':'green'" </code><br/>
+          <code>[ngStyle]="{{ '{' }}'font-style':this.canSave?'italic':'normal'{{ '}' }}"</code></p>
+      </div>
+      <div class="col-md-6">
+      <table class="table table-striped">
+        <tr>
+          <td [attr.colspan]="size">January</td>
+          <td>ABC</td>
+        </tr>
+        <tr>
+          <td colspan="2">February</td>
+          <td>March</td>
+        </tr>
+        <tr>
+          <td colspan="1">March</td>
+          <td>April</td>
+        </tr>
+      </table>
+      </div>
+
+    </div>
+  </div>
+</div>
