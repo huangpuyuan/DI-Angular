@@ -1,17 +1,26 @@
 <div class="container">
   <div>
-    <h2 class="page-header">
+    <h2 class="page-header title">
       <small>基本依赖注入和数据绑定例子</small>
     </h2>
   </div>
-  <div class="panel panel-default">
-    <div class="panel-heading">依赖注入</div>
-    <div class="container">
-      <div class="row">
-        <app-product1></app-product1>
-        <app-product2></app-product2>
+  <div class="panel-group" id="accordion" aria-multiselectable="true">
+    <div class="panel panel-default">
+      <div class="panel-heading" id="headingOne">
+        <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+             aria-expanded="true" aria-controls="collapseOne">依赖注入</a>
+        </h4>
+      </div>
+      <div id="collapseOne" class="panel-collapse collapse" aria-labelledby="headingOne">
+        <div class="panel-body">
+          <div class="row">
+            <app-product1></app-product1>
+            <app-product2></app-product2>
+          </div>
+        </div>
       </div>
     </div>
+    <app-bind></app-bind>
   </div>
-  <app-bind></app-bind>
 </div>

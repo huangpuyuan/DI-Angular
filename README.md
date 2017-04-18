@@ -82,6 +82,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 <!--3.小括号后面的也可以是一个属性赋值 当按钮被点击的时候属性saved的值为true-->
 ```
 * 属性绑定
-
+  * DOM属性绑定
+  * HTML属性绑定
+    * css类属性绑定
+    * 样式属性绑定
+* 双向绑定
 ### 响应式编程RxJs
 ### 管道（格式化） 

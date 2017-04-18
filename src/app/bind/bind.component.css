@@ -1,0 +1,14 @@
+.a{
+  background: yellow;
+}
+.b{
+  color:red;
+}
+.c{
+  font-size: 20px;
+}
+.row > div{
+  border: 1px solid #ccc;
+  border-bottom: none;
+  padding: 5px;
+}
