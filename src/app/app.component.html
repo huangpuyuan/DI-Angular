@@ -1,14 +1,14 @@
 <div class="container">
   <div>
     <h2 class="page-header title">
-      <small>Angular2依赖注入和数据绑定例子</small>
+      <small>Angular2依赖注入、数据绑定、通讯、生命周期、构建和部署</small>
     </h2>
   </div>
   <div class="panel-group" id="accordion" aria-multiselectable="true">
     <div class="panel panel-default">
       <div class="panel-heading" id="headingOne">
         <h4 class="panel-title">
-            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
              aria-expanded="true" aria-controls="collapseOne">依赖注入</a>
         </h4>
       </div>
@@ -22,5 +22,36 @@
       </div>
     </div>
     <app-bind></app-bind>
+    <div class="panel panel-info">
+      <div class="panel-heading" role="tab" id="headingThree">
+        <h4 class="panel-title">
+          <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree"
+             aria-expanded="true"
+             aria-controls="collapseThree">组件间通讯</a>
+        </h4>
+      </div>
+      <div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
+        <div class="panel-body">
+          <div class="form-group form-inline">
+            <div class="row">
+            <div class="col-md-12 subComponent">
+              <h3 class="DI-title">我是父组件<small>负责发送或接收信息与组件间进行通讯</small></h3>
+              <span>发送股票代码给子组件1：</span><input class="form-control" type="text" placeholder="请输入股票代码" [(ngModel)]="stock">
+              <p style="font-size: 17px;">
+                这是在<b>报价组件</b>外部接收子组件信息，股票代码是<i><b>{{priceQuote.stockCode}}</b></i>,
+                股票价格是 <code>{{priceQuote.lastPrice | number:'2.2-2'}}</code>,并作为<b>中间人</b>组件传值给<b>下单组件</b>
+              </p>
+              <p class="text-danger">注意要点：在构建组件的时候要先设计好组件间的通讯模式，然后在构建组件或服务的输入、输出、中间人（谁和谁通讯需要谁作为中间人）。</p>
+            </div>
+            </div>
+            <div class="row">
+              <app-order [stockCode]="stock" [amount]="100"></app-order>
+              <app-price-quote (buyIt)="buyHandler($event)"  (priceChange)="priceQuoteHandler($event)" ></app-price-quote>
+              <app-another-order [anotherPriceQuote]="anotherPriceQuote"></app-another-order>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

@@ -96,3 +96,17 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 * 在Angular中引入了一种事件处理的思路，将事件作为一个永不结束的的**流**来处理 
 > 你要成为一个真正的Angular的开发者，使用流来处理事件才是
 ### 管道（格式化） 
+* pipe
+
+### 组件件的通讯
+> 依赖注入方式　＆　松耦合的方式
+
+* 组件的输入输出属性
+  * 输入
+  * 输出 
+    * RxJs 观察者与被观察者
+     
+* 使用中间人模式传递数据
+* 组件生命周期以及Angular的变化机制
+
+

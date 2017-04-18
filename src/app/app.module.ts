@@ -11,6 +11,9 @@ import {LoggerService} from "./shared/logger.service";
 import {AnotherProductService} from "./shared/another-product.service";
 import {BindComponent} from './bind/bind.component';
 import { MultiplePipe } from './pipe/multiple.pipe';
+import { OrderComponent } from './order/order.component';
+import { PriceQuoteComponent } from './price-quote/price-quote.component';
+import { AnotherOrderComponent } from './another-order/another-order.component';
 
 export function myFactory(logger: LoggerService, appConfig) {
   if (appConfig.isDev) {
@@ -26,7 +29,10 @@ export function myFactory(logger: LoggerService, appConfig) {
     Product1Component,
     Product2Component,
     BindComponent,
-    MultiplePipe
+    MultiplePipe,
+    OrderComponent,
+    PriceQuoteComponent,
+    AnotherOrderComponent
   ],
   imports: [
     BrowserModule,
