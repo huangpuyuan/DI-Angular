@@ -59,7 +59,7 @@
         <div class="col-md-6">
           <p>html属性绑定：样式绑定</p>
           <div [style.color]="isDev?'red':'blue'">样式绑定</div>
-          <div [style.font-size.em]="isDev?3:1">样式绑定2</div>
+          <div [style.font-size.em]="isDev?1.5:1">样式绑定2</div>
           <div [ngStyle]="divStyle">样式绑定3</div>
         </div>
         <div class="col-md-6">
@@ -74,6 +74,31 @@
               <label for="input2">{{name}}</label>
             </div>
           </div>
+        </div>
+        <div class="col-md-6">
+          <p><b>RxJS</b>响应式:</p>
+          <div class="form-group">
+          <input class="form-control" #myField (keyup)="onKey(myField.value)">
+          </div>
+          <p>响应式Demo:</p>
+          <div class="form-group">
+            <input class="form-control" [formControl]="searchInput">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <p>管道Demo：负责处理原始值到显示值的转换</p>
+          <p>当前服务器时间戳(原始值)：{{birthday}}</p>
+          <p>显示的时间（date）：{{birthday | date}}</p>
+          <p>格式化时间（data:'yyyy-MM--dd HH:mm:ss'）{{birthday | date:'yyyy-MM--dd HH:mm:ss'}}</p>
+          <p>月份大写（uppercase）： {{birthday | date | uppercase}}</p>
+          <p>月份小写（lowercase）： {{birthday | date | lowercase}}</p>
+          <hr>
+          <p> 圆周率是：{{pi}}</p>
+          <p>格式化（二位整数二位小数）{{pi|number:'2.2-2'}}</p>
+        </div>
+        <div class="col-md-6">
+          <p>自定义管道：如定义一个乘法的管道 输入命令 <kbd>ng g pipe pipe/multiple</kbd>创建管道</p>
+          <p>我自己定义的管道multiple ： {{mySize| multiple:'2'}}</p>
         </div>
       </div>
     </div>

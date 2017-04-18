@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {Observable} from "rxjs";
+import {FormControl} from "@angular/forms";
 
 @Component({
   selector: 'app-bind',
@@ -21,8 +23,26 @@ export class BindComponent implements OnInit {
     background: 'yellow'
   };
   name: string = '';
+  searchInput: FormControl = new FormControl();
+  birthday: Date = new Date();
+  pi: number = 3.1415926;
+  mySize: number = 7;
 
   constructor() {
+    // 响应式编程RxJS 响应式处理HTTP请求 万物用流处理
+    this.searchInput.valueChanges
+      .debounceTime(500)
+      .subscribe(stockCode => this.getStockInfo(stockCode));
+
+    Observable.from([1, 2, 3, 4])
+      .filter(e => e % 2 == 0)
+      .map(e => e * e)
+      .subscribe(
+        e => console.log(e),
+        err => console.error(err),
+        () => console.log(" 结束啦 ")
+      );
+
     setTimeout(() => {
       this.divClass = 'a b c';
       this.isBig = true;
@@ -60,4 +80,12 @@ export class BindComponent implements OnInit {
     console.log(event);
   }
 
+  onKey(value: string) {
+    console.log(value);
+  }
+
+  getStockInfo(value: string) {
+    // 流
+    console.log(value);
+  }
 }

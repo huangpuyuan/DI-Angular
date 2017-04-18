@@ -88,4 +88,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
     * 样式属性绑定
 * 双向绑定
 ### 响应式编程RxJs
+* 观察者模式与Rxjs（调用和注册）
+  * 可观察对象 Observable(流)：
+  * 观察者 Observer：
+  * 订阅 Subscription：
+  * 操作符 Operators：
+* 在Angular中引入了一种事件处理的思路，将事件作为一个永不结束的的**流**来处理 
+> 你要成为一个真正的Angular的开发者，使用流来处理事件才是
 ### 管道（格式化） 

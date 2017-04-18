@@ -1,6 +1,6 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
 
 import {AppComponent} from './app.component';
@@ -10,6 +10,7 @@ import {Product2Component} from './product2/product2.component';
 import {LoggerService} from "./shared/logger.service";
 import {AnotherProductService} from "./shared/another-product.service";
 import {BindComponent} from './bind/bind.component';
+import { MultiplePipe } from './pipe/multiple.pipe';
 
 export function myFactory(logger: LoggerService, appConfig) {
   if (appConfig.isDev) {
@@ -24,12 +25,14 @@ export function myFactory(logger: LoggerService, appConfig) {
     AppComponent,
     Product1Component,
     Product2Component,
-    BindComponent
+    BindComponent,
+    MultiplePipe
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    ReactiveFormsModule
   ],
   providers: [{
     provide: ProductService,
