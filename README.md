@@ -107,6 +107,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
     * RxJs 观察者与被观察者
      
 * 使用中间人模式传递数据
-* 组件生命周期以及Angular的变化机制
-
+  * 通过父组件作为中间人
+  * 通过服务作为中间人
+  
+#### 组件生命周期以及Angular的变化机制
+>组件生命周期钩子:1.组件初始化 _constructor_ ngOnChanges _ngOnInit_ ngDoCheck _ngAfterContentInit_ ngAfterContentChecked _ngAterViewInit_ ngAfterViewChecked，2.变化检测（同初始化） ngOnChanges ngDoCheck ngAfterContentChecked ngAfterViewChecked，3.组件销毁 _ngOnDestory_
 

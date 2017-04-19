@@ -1,4 +1,18 @@
-.title{
+.title {
   margin-top: 0px;
 }
+
+.parent {
+  background: cyan;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.wrapper {
+  background: cyan;
+  border-radius: 5px;
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+
 

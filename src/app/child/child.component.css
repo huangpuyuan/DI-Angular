@@ -1,0 +1,7 @@
+.child{
+  display: block;
+  background: lightgreen;
+  border-radius:5px;
+  padding:10px;
+  margin: 5px;
+}

@@ -1,11 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+.panel-group .panel+.panel {
+  margin-top: 0px;
+}
 .DI-title{
   margin: 5px 0;
 }
+
 .subComponent{
   border: 1px solid #ccc;
-  height: 150px;
   padding: 5px;
   border-radius: 6px;
   box-shadow: 2px 1px 0 0 rgba(0,0,0,.1);
+}
+
+.row > div {
+  padding:5px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  box-shadow: 1px 0 0 0 rgba(0,0,0,.1);
 }

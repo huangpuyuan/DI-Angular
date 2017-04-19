@@ -1,0 +1,11 @@
+<div class="child form-group">
+  <h4>我是子组件</h4>
+  <div>问候语：{{greeting}}</div>
+  <div>姓名：{{user.name}}</div>
+  <div >消息：<input class="form-control" [(ngModel)]="message"></div>
+  <hr>
+  <h4>总结：</h4>
+  <p class="text-danger">1.虽然user对象的name属性变化没有触发ngOnChanges方法,子组件的值也变了，得益于Angular的变更检测机制。</p>
+  <p class="text-danger">2.注意：改变子组件的message没有触发ngOnChanges方法，因为子组件的message属性没有使用@Input装饰器来注解，不是一个输入属性，而ngOnChanges方法只有当输入属性变化是才被调用。</p>
+  <button class="btn btn-danger" (click)="checkHandler()" >触发</button>
+</div>

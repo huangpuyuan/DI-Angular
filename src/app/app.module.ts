@@ -14,6 +14,10 @@ import { MultiplePipe } from './pipe/multiple.pipe';
 import { OrderComponent } from './order/order.component';
 import { PriceQuoteComponent } from './price-quote/price-quote.component';
 import { AnotherOrderComponent } from './another-order/another-order.component';
+import { LifeComponent } from './life/life.component';
+import { ChildComponent } from './child/child.component';
+import { Child2Component } from './child2/child2.component';
+import { Child3Component } from './child3/child3.component';
 
 export function myFactory(logger: LoggerService, appConfig) {
   if (appConfig.isDev) {
@@ -32,7 +36,11 @@ export function myFactory(logger: LoggerService, appConfig) {
     MultiplePipe,
     OrderComponent,
     PriceQuoteComponent,
-    AnotherOrderComponent
+    AnotherOrderComponent,
+    LifeComponent,
+    ChildComponent,
+    Child2Component,
+    Child3Component
   ],
   imports: [
     BrowserModule,

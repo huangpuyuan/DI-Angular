@@ -13,9 +13,7 @@ export class OrderComponent implements OnInit {
   amount: number;
 
   constructor() {
-    setInterval(() => {
-      this.stockCode = 'Apple';
-    }, 3000);
+
   }
 
 

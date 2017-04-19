@@ -23,31 +23,89 @@
     </div>
     <app-bind></app-bind>
     <div class="panel panel-info">
-      <div class="panel-heading" role="tab" id="headingThree">
+      <div class="panel-heading" id="headingThree">
         <h4 class="panel-title">
           <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree"
              aria-expanded="true"
              aria-controls="collapseThree">组件间通讯</a>
         </h4>
       </div>
-      <div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
+      <div id="collapseThree" class="panel-collapse collapse" aria-labelledby="headingThree">
         <div class="panel-body">
           <div class="form-group form-inline">
             <div class="row">
-            <div class="col-md-12 subComponent">
-              <h3 class="DI-title">我是父组件<small>负责发送或接收信息与组件间进行通讯</small></h3>
-              <span>发送股票代码给子组件1：</span><input class="form-control" type="text" placeholder="请输入股票代码" [(ngModel)]="stock">
-              <p style="font-size: 17px;">
-                这是在<b>报价组件</b>外部接收子组件信息，股票代码是<i><b>{{priceQuote.stockCode}}</b></i>,
-                股票价格是 <code>{{priceQuote.lastPrice | number:'2.2-2'}}</code>,并作为<b>中间人</b>组件传值给<b>下单组件</b>
-              </p>
-              <p class="text-danger">注意要点：在构建组件的时候要先设计好组件间的通讯模式，然后在构建组件或服务的输入、输出、中间人（谁和谁通讯需要谁作为中间人）。</p>
-            </div>
+              <div class="col-md-12 subComponent">
+                <h3 class="DI-title">我是父组件
+                  <small>负责发送或接收信息与组件间进行通讯</small>
+                </h3>
+                <span>发送股票代码给子组件1：</span><input class="form-control" type="text" placeholder="请输入股票代码"
+                                                [(ngModel)]="stock">
+                <p style="font-size: 17px;">
+                  这是在<b>报价组件</b>外部接收子组件信息，股票代码是<i><b>{{priceQuote.stockCode}}</b></i>,
+                  股票价格是 <code>{{priceQuote.lastPrice | number:'2.2-2'}}</code>,并作为<b>中间人</b>组件传值给<b>下单组件</b>
+                </p>
+                <p class="text-danger">注意要点：在构建组件的时候要先设计好组件间的通讯模式，然后在构建组件或服务的输入、输出、中间人（谁和谁通讯需要谁作为中间人）。</p>
+              </div>
             </div>
             <div class="row">
               <app-order [stockCode]="stock" [amount]="100"></app-order>
-              <app-price-quote (buyIt)="buyHandler($event)"  (priceChange)="priceQuoteHandler($event)" ></app-price-quote>
+              <app-price-quote (buyIt)="buyHandler($event)" (priceChange)="priceQuoteHandler($event)"></app-price-quote>
               <app-another-order [anotherPriceQuote]="anotherPriceQuote"></app-another-order>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-primary">
+      <div class="panel-heading" id="headingFour">
+        <h4 class="panel-title">
+          <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour"
+             aria-expanded="true"
+             aria-controls="collapseFour">生命周期钩子</a>
+        </h4>
+      </div>
+      <div id="collapseFour" class="panel-collapse collapse in" aria-labelledby="headingFour">
+        <div class="panel-body">
+          <app-life class="row" [name]="title"></app-life>
+          <div class="parent form-inline">
+            <h4>我是父组件</h4>
+            <div class="form-group">
+              问候语: <input class="form-control" type="text" [(ngModel)]="greeting">
+            </div>
+            <div class="form-group">
+              姓名: <input class="form-control" type="text" [(ngModel)]="user.name">
+            </div>
+            <hr>
+            <p class="text-danger">注意：改变user对象的name属性，user对象的引用自身是没有改变，故不触发ngOnChanges方法</p>
+            <app-child [greeting]="greeting" [user]="user"></app-child>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <h4>投影 :<code>ngContent</code></h4>
+              <div class="wrapper">
+                <h4>我是父组件</h4>
+                <div>这个div定义在父组件中</div>
+                <app-child3>
+                  <div class="header">这是页头.这个div是父组件投影到子组件的,
+                    title是{{title}}
+                  </div>
+                  <div class="footer">这是页脚.这个div是父组件投影到子组件的</div>
+                </app-child3>
+                <p>下面是用 <code>[innerHTML]</code>指令生成的：</p>
+                <div [innerHTML]="divContent"></div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <h4> 变更检测
+                <small>（Angular最复杂的模块）:当你写一个对性能要求很高的复杂页面的时候。比如页面展示几百个单元格的表格，并数据实时发生变动</small>
+              </h4>
+              <p>变更检测的策略：Default策略、OnPush策略</p>
+            </div>
+            <div class="col-md-4">
+              <h4>view钩子</h4>
+              <app-child2 #child1></app-child2>
+              <app-child2 #child2></app-child2>
+              <button (click)="child2.greeting('Jerry')" class="btn btn-success">调用#child2</button>
             </div>
           </div>
         </div>
