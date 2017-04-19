@@ -1,4 +1,7 @@
-import {AfterViewChecked, AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
+import {
+  AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, OnInit,
+  ViewChild
+} from '@angular/core';
 import {PriceQuote} from "./price-quote/price-quote.component";
 import {Child2Component} from "./child2/child2.component";
 
@@ -7,7 +10,13 @@ import {Child2Component} from "./child2/child2.component";
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit, AfterViewInit,AfterViewChecked {
+export class AppComponent implements OnInit, AfterViewInit, AfterViewChecked, AfterContentInit , AfterContentChecked {
+  ngAfterContentInit(): void {
+    console.log("父组件投影内容初始化完毕");
+  }
+  ngAfterContentChecked(): void {
+    // console.log("父组件投影内容变更检测完毕");
+  }
 
   ngAfterViewInit(): void {
     console.log("父组件的视图初始化完毕");
@@ -31,16 +40,16 @@ export class AppComponent implements OnInit, AfterViewInit,AfterViewChecked {
 
   title = 'Tom';
   greeting = 'Hello';
-  user:{name:string} = {name: 'James'};
+  user: { name: string } = {name: 'James'};
   divContent = "<div class='text-primary bg-warning'>我的偶像是勒布朗詹姆斯</div>"
 
   @ViewChild("child1")
-  child1:Child2Component;
+  child1: Child2Component;
 
   constructor() {
   }
 
-  ngOnInit():void{
+  ngOnInit(): void {
     this.child1.greeting("James");
   }
 }

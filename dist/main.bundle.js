@@ -1,6 +1,6 @@
 webpackJsonp([1,5],{
 
-/***/ 131:
+/***/ 139:
 /***/ (function(module, exports) {
 
 function webpackEmptyContext(req) {
@@ -9,20 +9,20 @@ function webpackEmptyContext(req) {
 webpackEmptyContext.keys = function() { return []; };
 webpackEmptyContext.resolve = webpackEmptyContext;
 module.exports = webpackEmptyContext;
-webpackEmptyContext.id = 131;
+webpackEmptyContext.id = 139;
 
 
 /***/ }),
 
-/***/ 132:
+/***/ 140:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__(140);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_module__ = __webpack_require__(143);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__(153);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__(148);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_module__ = __webpack_require__(152);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__(165);
 
 
 
@@ -35,12 +35,12 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dyna
 
 /***/ }),
 
-/***/ 141:
+/***/ 150:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__price_quote_price_quote_component__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__price_quote_price_quote_component__ = __webpack_require__(58);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AnotherOrderComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -65,10 +65,10 @@ __decorate([
     __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__price_quote_price_quote_component__["b" /* PriceQuote */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__price_quote_price_quote_component__["b" /* PriceQuote */]) === "function" && _a || Object)
 ], AnotherOrderComponent.prototype, "anotherPriceQuote", void 0);
 AnotherOrderComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_3" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* Component */])({
         selector: 'app-another-order',
-        template: __webpack_require__(223),
-        styles: [__webpack_require__(208)]
+        template: __webpack_require__(238),
+        styles: [__webpack_require__(220)]
     }),
     __metadata("design:paramtypes", [])
 ], AnotherOrderComponent);
@@ -78,13 +78,13 @@ var _a;
 
 /***/ }),
 
-/***/ 142:
+/***/ 151:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__price_quote_price_quote_component__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__child2_child2_component__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__price_quote_price_quote_component__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__child2_child2_component__ = __webpack_require__(87);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -108,6 +108,12 @@ var AppComponent = (function () {
         this.user = { name: 'James' };
         this.divContent = "<div class='text-primary bg-warning'>我的偶像是勒布朗詹姆斯</div>";
     }
+    AppComponent.prototype.ngAfterContentInit = function () {
+        console.log("父组件投影内容初始化完毕");
+    };
+    AppComponent.prototype.ngAfterContentChecked = function () {
+        // console.log("父组件投影内容变更检测完毕");
+    };
     AppComponent.prototype.ngAfterViewInit = function () {
         console.log("父组件的视图初始化完毕");
     };
@@ -126,14 +132,14 @@ var AppComponent = (function () {
     return AppComponent;
 }());
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_4" /* ViewChild */])("child1"),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* ViewChild */])("child1"),
     __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__child2_child2_component__["a" /* Child2Component */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__child2_child2_component__["a" /* Child2Component */]) === "function" && _a || Object)
 ], AppComponent.prototype, "child1", void 0);
 AppComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_3" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* Component */])({
         selector: 'app-root',
-        template: __webpack_require__(224),
-        styles: [__webpack_require__(209)]
+        template: __webpack_require__(239),
+        styles: [__webpack_require__(221)]
     }),
     __metadata("design:paramtypes", [])
 ], AppComponent);
@@ -143,29 +149,33 @@ var _a;
 
 /***/ }),
 
-/***/ 143:
+/***/ 152:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(28);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(82);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(139);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__(142);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__product1_product1_component__ = __webpack_require__(150);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared_product_service__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__product2_product2_component__ = __webpack_require__(151);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__shared_logger_service__ = __webpack_require__(57);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__shared_another_product_service__ = __webpack_require__(152);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__bind_bind_component__ = __webpack_require__(144);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pipe_multiple_pipe__ = __webpack_require__(149);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__order_order_component__ = __webpack_require__(148);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__price_quote_price_quote_component__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__another_order_another_order_component__ = __webpack_require__(141);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__life_life_component__ = __webpack_require__(147);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__child_child_component__ = __webpack_require__(146);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__child2_child2_component__ = __webpack_require__(83);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__child3_child3_component__ = __webpack_require__(145);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(147);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__(149);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(151);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__product1_product1_component__ = __webpack_require__(162);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__shared_product_service__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__product2_product2_component__ = __webpack_require__(163);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__shared_logger_service__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__shared_another_product_service__ = __webpack_require__(164);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__bind_bind_component__ = __webpack_require__(153);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pipe_multiple_pipe__ = __webpack_require__(161);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__order_order_component__ = __webpack_require__(160);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__price_quote_price_quote_component__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__another_order_another_order_component__ = __webpack_require__(150);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__life_life_component__ = __webpack_require__(159);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__child_child_component__ = __webpack_require__(158);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__child2_child2_component__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__child3_child3_component__ = __webpack_require__(154);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__child4_child4_component__ = __webpack_require__(155);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__child5_child5_component__ = __webpack_require__(156);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__child6_child6_component__ = __webpack_require__(157);
 /* unused harmony export myFactory */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -193,12 +203,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+
+
+
+var routeConfig = [
+    { path: 'child6', component: __WEBPACK_IMPORTED_MODULE_22__child6_child6_component__["a" /* Child6Component */] },
+    { path: 'child5', component: __WEBPACK_IMPORTED_MODULE_21__child5_child5_component__["a" /* Child5Component */] }
+];
 function myFactory(logger, appConfig) {
     if (appConfig.isDev) {
-        return new __WEBPACK_IMPORTED_MODULE_6__shared_product_service__["a" /* ProductService */](logger);
+        return new __WEBPACK_IMPORTED_MODULE_7__shared_product_service__["a" /* ProductService */](logger);
     }
     else {
-        return new __WEBPACK_IMPORTED_MODULE_9__shared_another_product_service__["a" /* AnotherProductService */](logger);
+        return new __WEBPACK_IMPORTED_MODULE_10__shared_another_product_service__["a" /* AnotherProductService */](logger);
     }
 }
 var AppModule = (function () {
@@ -209,34 +227,38 @@ var AppModule = (function () {
 AppModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["b" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */],
-            __WEBPACK_IMPORTED_MODULE_5__product1_product1_component__["a" /* Product1Component */],
-            __WEBPACK_IMPORTED_MODULE_7__product2_product2_component__["a" /* Product2Component */],
-            __WEBPACK_IMPORTED_MODULE_10__bind_bind_component__["a" /* BindComponent */],
-            __WEBPACK_IMPORTED_MODULE_11__pipe_multiple_pipe__["a" /* MultiplePipe */],
-            __WEBPACK_IMPORTED_MODULE_12__order_order_component__["a" /* OrderComponent */],
-            __WEBPACK_IMPORTED_MODULE_13__price_quote_price_quote_component__["a" /* PriceQuoteComponent */],
-            __WEBPACK_IMPORTED_MODULE_14__another_order_another_order_component__["a" /* AnotherOrderComponent */],
-            __WEBPACK_IMPORTED_MODULE_15__life_life_component__["a" /* LifeComponent */],
-            __WEBPACK_IMPORTED_MODULE_16__child_child_component__["a" /* ChildComponent */],
-            __WEBPACK_IMPORTED_MODULE_17__child2_child2_component__["a" /* Child2Component */],
-            __WEBPACK_IMPORTED_MODULE_18__child3_child3_component__["a" /* Child3Component */]
+            __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */],
+            __WEBPACK_IMPORTED_MODULE_6__product1_product1_component__["a" /* Product1Component */],
+            __WEBPACK_IMPORTED_MODULE_8__product2_product2_component__["a" /* Product2Component */],
+            __WEBPACK_IMPORTED_MODULE_11__bind_bind_component__["a" /* BindComponent */],
+            __WEBPACK_IMPORTED_MODULE_12__pipe_multiple_pipe__["a" /* MultiplePipe */],
+            __WEBPACK_IMPORTED_MODULE_13__order_order_component__["a" /* OrderComponent */],
+            __WEBPACK_IMPORTED_MODULE_14__price_quote_price_quote_component__["a" /* PriceQuoteComponent */],
+            __WEBPACK_IMPORTED_MODULE_15__another_order_another_order_component__["a" /* AnotherOrderComponent */],
+            __WEBPACK_IMPORTED_MODULE_16__life_life_component__["a" /* LifeComponent */],
+            __WEBPACK_IMPORTED_MODULE_17__child_child_component__["a" /* ChildComponent */],
+            __WEBPACK_IMPORTED_MODULE_18__child2_child2_component__["a" /* Child2Component */],
+            __WEBPACK_IMPORTED_MODULE_19__child3_child3_component__["a" /* Child3Component */],
+            __WEBPACK_IMPORTED_MODULE_20__child4_child4_component__["a" /* Child4Component */],
+            __WEBPACK_IMPORTED_MODULE_21__child5_child5_component__["a" /* Child5Component */],
+            __WEBPACK_IMPORTED_MODULE_22__child6_child6_component__["a" /* Child6Component */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
             __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
             __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* HttpModule */],
-            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* ReactiveFormsModule */]
+            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* ReactiveFormsModule */],
+            __WEBPACK_IMPORTED_MODULE_4__angular_router__["a" /* RouterModule */].forRoot(routeConfig)
         ],
         providers: [{
-                provide: __WEBPACK_IMPORTED_MODULE_6__shared_product_service__["a" /* ProductService */],
+                provide: __WEBPACK_IMPORTED_MODULE_7__shared_product_service__["a" /* ProductService */],
                 useFactory: myFactory,
-                deps: [__WEBPACK_IMPORTED_MODULE_8__shared_logger_service__["a" /* LoggerService */], "APP_CONFIG"]
-            }, __WEBPACK_IMPORTED_MODULE_8__shared_logger_service__["a" /* LoggerService */],
+                deps: [__WEBPACK_IMPORTED_MODULE_9__shared_logger_service__["a" /* LoggerService */], "APP_CONFIG"]
+            }, __WEBPACK_IMPORTED_MODULE_9__shared_logger_service__["a" /* LoggerService */],
             {
                 provide: "APP_CONFIG", useValue: { isDev: false }
             }],
-        bootstrap: [__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */]]
+        bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]]
     })
 ], AppModule);
 
@@ -244,14 +266,14 @@ AppModule = __decorate([
 
 /***/ }),
 
-/***/ 144:
+/***/ 153:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs__ = __webpack_require__(235);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs__ = __webpack_require__(253);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(86);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BindComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -335,10 +357,10 @@ var BindComponent = (function () {
     return BindComponent;
 }());
 BindComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_3" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* Component */])({
         selector: 'app-bind',
-        template: __webpack_require__(225),
-        styles: [__webpack_require__(210)]
+        template: __webpack_require__(240),
+        styles: [__webpack_require__(222)]
     }),
     __metadata("design:paramtypes", [])
 ], BindComponent);
@@ -347,7 +369,7 @@ BindComponent = __decorate([
 
 /***/ }),
 
-/***/ 145:
+/***/ 154:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -371,10 +393,10 @@ var Child3Component = (function () {
     return Child3Component;
 }());
 Child3Component = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_3" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* Component */])({
         selector: 'app-child3',
-        template: __webpack_require__(227),
-        styles: [__webpack_require__(212)]
+        template: __webpack_require__(242),
+        styles: [__webpack_require__(224)]
     }),
     __metadata("design:paramtypes", [])
 ], Child3Component);
@@ -383,7 +405,129 @@ Child3Component = __decorate([
 
 /***/ }),
 
-/***/ 146:
+/***/ 155:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(5);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Child4Component; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var Child4Component = (function () {
+    function Child4Component() {
+        this.message = 'hello';
+    }
+    Child4Component.prototype.ngAfterContentInit = function () {
+        console.log("子组件投影内容初始化完毕");
+        this.message = 'hello world';
+    };
+    Child4Component.prototype.ngAfterContentChecked = function () {
+        // console.log("子组件投影内容变更检测完毕");
+    };
+    Child4Component.prototype.ngOnInit = function () {
+    };
+    return Child4Component;
+}());
+Child4Component = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* Component */])({
+        selector: 'app-child4',
+        template: __webpack_require__(243),
+        styles: [__webpack_require__(225)]
+    }),
+    __metadata("design:paramtypes", [])
+], Child4Component);
+
+//# sourceMappingURL=child4.component.js.map
+
+/***/ }),
+
+/***/ 156:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(5);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Child5Component; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var Child5Component = (function () {
+    function Child5Component() {
+    }
+    Child5Component.prototype.ngOnDestroy = function () {
+        console.log("child5组件被销毁");
+    };
+    Child5Component.prototype.ngOnInit = function () {
+    };
+    return Child5Component;
+}());
+Child5Component = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* Component */])({
+        selector: 'app-child5',
+        template: __webpack_require__(244),
+        styles: [__webpack_require__(226)]
+    }),
+    __metadata("design:paramtypes", [])
+], Child5Component);
+
+//# sourceMappingURL=child5.component.js.map
+
+/***/ }),
+
+/***/ 157:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(5);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Child6Component; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var Child6Component = (function () {
+    function Child6Component() {
+    }
+    Child6Component.prototype.ngOnDestroy = function () {
+        console.log("child6组件被销毁");
+    };
+    Child6Component.prototype.ngOnInit = function () {
+    };
+    return Child6Component;
+}());
+Child6Component = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* Component */])({
+        selector: 'app-child6',
+        template: __webpack_require__(245),
+        styles: [__webpack_require__(227)]
+    }),
+    __metadata("design:paramtypes", [])
+], Child6Component);
+
+//# sourceMappingURL=child6.component.js.map
+
+/***/ }),
+
+/***/ 158:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -405,6 +549,9 @@ var ChildComponent = (function () {
         this.changeDetected = false;
         this.noChangeCount = 0;
     }
+    ChildComponent.prototype.ngOnDestroy = function () {
+        console.log("child组件被销毁");
+    };
     ChildComponent.prototype.ngOnInit = function () {
     };
     ChildComponent.prototype.ngOnChanges = function (changes) {
@@ -440,10 +587,10 @@ __decorate([
     __metadata("design:type", Object)
 ], ChildComponent.prototype, "user", void 0);
 ChildComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_3" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* Component */])({
         selector: 'app-child',
-        template: __webpack_require__(228),
-        styles: [__webpack_require__(213)]
+        template: __webpack_require__(246),
+        styles: [__webpack_require__(228)]
     }),
     __metadata("design:paramtypes", [])
 ], ChildComponent);
@@ -452,7 +599,7 @@ ChildComponent = __decorate([
 
 /***/ }),
 
-/***/ 147:
+/***/ 159:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -508,10 +655,10 @@ __decorate([
     __metadata("design:type", String)
 ], LifeComponent.prototype, "name", void 0);
 LifeComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_3" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* Component */])({
         selector: 'app-life',
-        template: __webpack_require__(229),
-        styles: [__webpack_require__(214)]
+        template: __webpack_require__(247),
+        styles: [__webpack_require__(229)]
     }),
     __metadata("design:paramtypes", [])
 ], LifeComponent);
@@ -520,7 +667,7 @@ LifeComponent = __decorate([
 
 /***/ }),
 
-/***/ 148:
+/***/ 160:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -552,10 +699,10 @@ __decorate([
     __metadata("design:type", Number)
 ], OrderComponent.prototype, "amount", void 0);
 OrderComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_3" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* Component */])({
         selector: 'app-order',
-        template: __webpack_require__(230),
-        styles: [__webpack_require__(215)]
+        template: __webpack_require__(248),
+        styles: [__webpack_require__(230)]
     }),
     __metadata("design:paramtypes", [])
 ], OrderComponent);
@@ -564,7 +711,7 @@ OrderComponent = __decorate([
 
 /***/ }),
 
-/***/ 149:
+/***/ 161:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -589,7 +736,7 @@ var MultiplePipe = (function () {
     return MultiplePipe;
 }());
 MultiplePipe = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_1" /* Pipe */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["S" /* Pipe */])({
         name: 'multiple'
     })
 ], MultiplePipe);
@@ -598,12 +745,12 @@ MultiplePipe = __decorate([
 
 /***/ }),
 
-/***/ 150:
+/***/ 162:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_product_service__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_product_service__ = __webpack_require__(41);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Product1Component; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -626,10 +773,10 @@ var Product1Component = (function () {
     return Product1Component;
 }());
 Product1Component = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_3" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* Component */])({
         selector: 'app-product1',
-        template: __webpack_require__(232),
-        styles: [__webpack_require__(217)]
+        template: __webpack_require__(250),
+        styles: [__webpack_require__(232)]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__shared_product_service__["a" /* ProductService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__shared_product_service__["a" /* ProductService */]) === "function" && _a || Object])
 ], Product1Component);
@@ -639,12 +786,12 @@ var _a;
 
 /***/ }),
 
-/***/ 151:
+/***/ 163:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_product_service__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_product_service__ = __webpack_require__(41);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Product2Component; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -668,12 +815,12 @@ var Product2Component = (function () {
     return Product2Component;
 }());
 Product2Component = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_3" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* Component */])({
         selector: 'app-product2',
-        template: __webpack_require__(233),
-        styles: [__webpack_require__(218)]
+        template: __webpack_require__(251),
+        styles: [__webpack_require__(233)]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Injector */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Injector */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Injector */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Injector */]) === "function" && _a || Object])
 ], Product2Component);
 
 var _a;
@@ -681,13 +828,13 @@ var _a;
 
 /***/ }),
 
-/***/ 152:
+/***/ 164:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_app_shared_product_service__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__logger_service__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_app_shared_product_service__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__logger_service__ = __webpack_require__(59);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AnotherProductService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -720,7 +867,7 @@ var _a;
 
 /***/ }),
 
-/***/ 153:
+/***/ 165:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -737,10 +884,10 @@ var environment = {
 
 /***/ }),
 
-/***/ 208:
+/***/ 220:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(13)();
+exports = module.exports = __webpack_require__(9)();
 // imports
 
 
@@ -755,10 +902,10 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 209:
+/***/ 221:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(13)();
+exports = module.exports = __webpack_require__(9)();
 // imports
 
 
@@ -773,10 +920,10 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 210:
+/***/ 222:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(13)();
+exports = module.exports = __webpack_require__(9)();
 // imports
 
 
@@ -791,10 +938,10 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 211:
+/***/ 223:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(13)();
+exports = module.exports = __webpack_require__(9)();
 // imports
 
 
@@ -809,10 +956,10 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 212:
+/***/ 224:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(13)();
+exports = module.exports = __webpack_require__(9)();
 // imports
 
 
@@ -827,10 +974,64 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 213:
+/***/ 225:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(13)();
+exports = module.exports = __webpack_require__(9)();
+// imports
+
+
+// module
+exports.push([module.i, ".wrapper{\r\n  background: lightgreen;\r\n  border-radius:5px;\r\n  border: 1px solid #ccc;\r\n}\r\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ 226:
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(9)();
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ 227:
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(9)();
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ 228:
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(9)();
 // imports
 
 
@@ -845,10 +1046,10 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 214:
+/***/ 229:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(13)();
+exports = module.exports = __webpack_require__(9)();
 // imports
 
 
@@ -863,10 +1064,10 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 215:
+/***/ 230:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(13)();
+exports = module.exports = __webpack_require__(9)();
 // imports
 
 
@@ -881,10 +1082,10 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 216:
+/***/ 231:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(13)();
+exports = module.exports = __webpack_require__(9)();
 // imports
 
 
@@ -899,10 +1100,10 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 217:
+/***/ 232:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(13)();
+exports = module.exports = __webpack_require__(9)();
 // imports
 
 
@@ -917,10 +1118,10 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 218:
+/***/ 233:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(13)();
+exports = module.exports = __webpack_require__(9)();
 // imports
 
 
@@ -935,89 +1136,110 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 223:
+/***/ 238:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"col-md-4 subComponent\">\r\n  <h4>我是另一个子组件下单组件<small>接收报价组件的信息</small></h4>\r\n  <p>买<code>100</code>手<i><b>{{anotherPriceQuote.stockCode}}</b></i>股票，买入价格是 <code>{{anotherPriceQuote.lastPrice| number:\"2.2-2\"}}</code></p>\r\n  <p class=\"text-danger\"><small>注意要点：下单组件和报价组件彼此互不相知的情况下通过<b>父组件</b>这个中间人进行通讯。\r\n    另外,如果两个组件没有共同的父组件，需要通过 <b>服务</b>来作为中间人进行组件间通讯</small></p>\r\n</div>\r\n"
+module.exports = "<div class=\"col-md-4 subComponent\">\n  <h4>我是另一个子组件下单组件<small>接收报价组件的信息</small></h4>\n  <p>买<code>100</code>手<i><b>{{anotherPriceQuote.stockCode}}</b></i>股票，买入价格是 <code>{{anotherPriceQuote.lastPrice| number:\"2.2-2\"}}</code></p>\n  <p class=\"text-danger\"><small>注意要点：下单组件和报价组件彼此互不相知的情况下通过<b>父组件</b>这个中间人进行通讯。\n    另外,如果两个组件没有共同的父组件，需要通过 <b>服务</b>来作为中间人进行组件间通讯</small></p>\n</div>\n"
 
 /***/ }),
 
-/***/ 224:
+/***/ 239:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\r\n  <div>\r\n    <h2 class=\"page-header title\">\r\n      <small>Angular2依赖注入、数据绑定、通讯、生命周期、构建和部署</small>\r\n    </h2>\r\n  </div>\r\n  <div class=\"panel-group\" id=\"accordion\" aria-multiselectable=\"true\">\r\n    <div class=\"panel panel-default\">\r\n      <div class=\"panel-heading\" id=\"headingOne\">\r\n        <h4 class=\"panel-title\">\r\n          <a data-toggle=\"collapse\" data-parent=\"#accordion\" href=\"#collapseOne\"\r\n             aria-expanded=\"true\" aria-controls=\"collapseOne\">依赖注入</a>\r\n        </h4>\r\n      </div>\r\n      <div id=\"collapseOne\" class=\"panel-collapse collapse\" aria-labelledby=\"headingOne\">\r\n        <div class=\"panel-body\">\r\n          <div class=\"row\">\r\n            <app-product1></app-product1>\r\n            <app-product2></app-product2>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <app-bind></app-bind>\r\n    <div class=\"panel panel-info\">\r\n      <div class=\"panel-heading\" id=\"headingThree\">\r\n        <h4 class=\"panel-title\">\r\n          <a class=\"collapsed\" data-toggle=\"collapse\" data-parent=\"#accordion\" href=\"#collapseThree\"\r\n             aria-expanded=\"true\"\r\n             aria-controls=\"collapseThree\">组件间通讯</a>\r\n        </h4>\r\n      </div>\r\n      <div id=\"collapseThree\" class=\"panel-collapse collapse\" aria-labelledby=\"headingThree\">\r\n        <div class=\"panel-body\">\r\n          <div class=\"form-group form-inline\">\r\n            <div class=\"row\">\r\n              <div class=\"col-md-12 subComponent\">\r\n                <h3 class=\"DI-title\">我是父组件\r\n                  <small>负责发送或接收信息与组件间进行通讯</small>\r\n                </h3>\r\n                <span>发送股票代码给子组件1：</span><input class=\"form-control\" type=\"text\" placeholder=\"请输入股票代码\"\r\n                                                [(ngModel)]=\"stock\">\r\n                <p style=\"font-size: 17px;\">\r\n                  这是在<b>报价组件</b>外部接收子组件信息，股票代码是<i><b>{{priceQuote.stockCode}}</b></i>,\r\n                  股票价格是 <code>{{priceQuote.lastPrice | number:'2.2-2'}}</code>,并作为<b>中间人</b>组件传值给<b>下单组件</b>\r\n                </p>\r\n                <p class=\"text-danger\">注意要点：在构建组件的时候要先设计好组件间的通讯模式，然后在构建组件或服务的输入、输出、中间人（谁和谁通讯需要谁作为中间人）。</p>\r\n              </div>\r\n            </div>\r\n            <div class=\"row\">\r\n              <app-order [stockCode]=\"stock\" [amount]=\"100\"></app-order>\r\n              <app-price-quote (buyIt)=\"buyHandler($event)\" (priceChange)=\"priceQuoteHandler($event)\"></app-price-quote>\r\n              <app-another-order [anotherPriceQuote]=\"anotherPriceQuote\"></app-another-order>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"panel panel-primary\">\r\n      <div class=\"panel-heading\" id=\"headingFour\">\r\n        <h4 class=\"panel-title\">\r\n          <a class=\"collapsed\" data-toggle=\"collapse\" data-parent=\"#accordion\" href=\"#collapseFour\"\r\n             aria-expanded=\"true\"\r\n             aria-controls=\"collapseFour\">生命周期钩子</a>\r\n        </h4>\r\n      </div>\r\n      <div id=\"collapseFour\" class=\"panel-collapse collapse in\" aria-labelledby=\"headingFour\">\r\n        <div class=\"panel-body\">\r\n          <app-life class=\"row\" [name]=\"title\"></app-life>\r\n          <div class=\"parent form-inline\">\r\n            <h4>我是父组件</h4>\r\n            <div class=\"form-group\">\r\n              问候语: <input class=\"form-control\" type=\"text\" [(ngModel)]=\"greeting\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              姓名: <input class=\"form-control\" type=\"text\" [(ngModel)]=\"user.name\">\r\n            </div>\r\n            <hr>\r\n            <p class=\"text-danger\">注意：改变user对象的name属性，user对象的引用自身是没有改变，故不触发ngOnChanges方法</p>\r\n            <app-child [greeting]=\"greeting\" [user]=\"user\"></app-child>\r\n          </div>\r\n          <div class=\"row\">\r\n            <div class=\"col-md-4\">\r\n              <h4>投影 :<code>ngContent</code></h4>\r\n              <div class=\"wrapper\">\r\n                <h4>我是父组件</h4>\r\n                <div>这个div定义在父组件中</div>\r\n                <app-child3>\r\n                  <div class=\"header\">这是页头.这个div是父组件投影到子组件的,\r\n                    title是{{title}}\r\n                  </div>\r\n                  <div class=\"footer\">这是页脚.这个div是父组件投影到子组件的</div>\r\n                </app-child3>\r\n                <p>下面是用 <code>[innerHTML]</code>指令生成的：</p>\r\n                <div [innerHTML]=\"divContent\"></div>\r\n              </div>\r\n            </div>\r\n            <div class=\"col-md-4\">\r\n              <h4> 变更检测\r\n                <small>（Angular最复杂的模块）:当你写一个对性能要求很高的复杂页面的时候。比如页面展示几百个单元格的表格，并数据实时发生变动</small>\r\n              </h4>\r\n              <p>变更检测的策略：Default策略、OnPush策略</p>\r\n            </div>\r\n            <div class=\"col-md-4\">\r\n              <h4>view钩子</h4>\r\n              <app-child2 #child1></app-child2>\r\n              <app-child2 #child2></app-child2>\r\n              <button (click)=\"child2.greeting('Jerry')\" class=\"btn btn-success\">调用#child2</button>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"container\">\r\n  <div>\r\n    <h2 class=\"page-header title\">\r\n      <small>Angular2依赖注入、数据绑定、通讯、生命周期、构建和部署</small>\r\n    </h2>\r\n  </div>\r\n  <div class=\"panel-group\" id=\"accordion\" aria-multiselectable=\"true\">\r\n    <div class=\"panel panel-default\">\r\n      <div class=\"panel-heading\" id=\"headingOne\">\r\n        <h4 class=\"panel-title\">\r\n          <a data-toggle=\"collapse\" data-parent=\"#accordion\" href=\"#collapseOne\"\r\n             aria-expanded=\"true\" aria-controls=\"collapseOne\">依赖注入</a>\r\n        </h4>\r\n      </div>\r\n      <div id=\"collapseOne\" class=\"panel-collapse collapse\" aria-labelledby=\"headingOne\">\r\n        <div class=\"panel-body\">\r\n          <div class=\"row\">\r\n            <app-product1></app-product1>\r\n            <app-product2></app-product2>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <app-bind></app-bind>\r\n    <div class=\"panel panel-info\">\r\n      <div class=\"panel-heading\" id=\"headingThree\">\r\n        <h4 class=\"panel-title\">\r\n          <a class=\"collapsed\" data-toggle=\"collapse\" data-parent=\"#accordion\" href=\"#collapseThree\"\r\n             aria-expanded=\"true\"\r\n             aria-controls=\"collapseThree\">组件间通讯</a>\r\n        </h4>\r\n      </div>\r\n      <div id=\"collapseThree\" class=\"panel-collapse collapse\" aria-labelledby=\"headingThree\">\r\n        <div class=\"panel-body\">\r\n          <div class=\"form-group form-inline\">\r\n            <div class=\"row\">\r\n              <div class=\"col-md-12 subComponent\">\r\n                <h3 class=\"DI-title\">我是父组件\r\n                  <small>负责发送或接收信息与组件间进行通讯</small>\r\n                </h3>\r\n                <span>发送股票代码给子组件1：</span><input class=\"form-control\" type=\"text\" placeholder=\"请输入股票代码\"\r\n                                                [(ngModel)]=\"stock\">\r\n                <p style=\"font-size: 17px;\">\r\n                  这是在<b>报价组件</b>外部接收子组件信息，股票代码是<i><b>{{priceQuote.stockCode}}</b></i>,\r\n                  股票价格是 <code>{{priceQuote.lastPrice | number:'2.2-2'}}</code>,并作为<b>中间人</b>组件传值给<b>下单组件</b>\r\n                </p>\r\n                <p class=\"text-danger\">注意要点：在构建组件的时候要先设计好组件间的通讯模式，然后在构建组件或服务的输入、输出、中间人（谁和谁通讯需要谁作为中间人）。</p>\r\n              </div>\r\n            </div>\r\n            <div class=\"row\">\r\n              <app-order [stockCode]=\"stock\" [amount]=\"100\"></app-order>\r\n              <app-price-quote (buyIt)=\"buyHandler($event)\" (priceChange)=\"priceQuoteHandler($event)\"></app-price-quote>\r\n              <app-another-order [anotherPriceQuote]=\"anotherPriceQuote\"></app-another-order>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"panel panel-primary\">\r\n      <div class=\"panel-heading\" id=\"headingFour\">\r\n        <h4 class=\"panel-title\">\r\n          <a class=\"collapsed\" data-toggle=\"collapse\" data-parent=\"#accordion\" href=\"#collapseFour\"\r\n             aria-expanded=\"true\"\r\n             aria-controls=\"collapseFour\">生命周期钩子</a>\r\n        </h4>\r\n      </div>\r\n      <div id=\"collapseFour\" class=\"panel-collapse collapse in\" aria-labelledby=\"headingFour\">\r\n        <div class=\"panel-body\">\r\n          <app-life class=\"row\" [name]=\"title\"></app-life>\r\n          <div class=\"parent form-inline\">\r\n            <h4>我是父组件</h4>\r\n            <div class=\"form-group\">\r\n              问候语: <input class=\"form-control\" type=\"text\" [(ngModel)]=\"greeting\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              姓名: <input class=\"form-control\" type=\"text\" [(ngModel)]=\"user.name\">\r\n            </div>\r\n            <hr>\r\n            <p class=\"text-danger\">注意：改变user对象的name属性，user对象的引用自身是没有改变，故不触发ngOnChanges方法</p>\r\n            <app-child [greeting]=\"greeting\" [user]=\"user\"></app-child>\r\n          </div>\r\n          <div class=\"row\">\r\n            <div class=\"col-md-4\">\r\n              <h4>投影 :<code>ngContent</code></h4>\r\n              <div class=\"wrapper\">\r\n                <h4>我是父组件</h4>\r\n                <div>这个div定义在父组件中</div>\r\n                <app-child3>\r\n                  <div class=\"header\">这是页头.这个div是父组件投影到子组件的,\r\n                    title是{{title}}\r\n                  </div>\r\n                  <div class=\"footer\">这是页脚.这个div是父组件投影到子组件的</div>\r\n                </app-child3>\r\n                <p>下面是用 <code>[innerHTML]</code>指令生成的：</p>\r\n                <div [innerHTML]=\"divContent\"></div>\r\n              </div>\r\n            </div>\r\n            <div class=\"col-md-4\">\r\n              <h4> 变更检测\r\n                <small>（Angular最复杂的模块）:当你写一个对性能要求很高的复杂页面的时候。比如页面展示几百个单元格的表格，并数据实时发生变动</small>\r\n              </h4>\r\n              <p>变更检测的策略：Default策略、OnPush策略</p>\r\n            </div>\r\n            <div class=\"col-md-4\">\r\n              <h4>视图钩子 <code>AfterViewInit/AfterViewChecked</code></h4>\r\n              <app-child2 #child1></app-child2>\r\n              <app-child2 #child2></app-child2>\r\n              <button (click)=\"child2.greeting('Jerry')\" class=\"btn btn-success\">调用#child2</button>\r\n            </div>\r\n            <div class=\"col-md-4\">\r\n              <h4>投影钩子<code>AfterContentInit/AfterContentChecked</code></h4>\r\n              <app-child4></app-child4>\r\n            </div>\r\n            <div class=\"col-md-4\">\r\n              <h4>组件销毁 <code>ngOnDestory</code></h4>\r\n              <p class=\"bg-warning\">在路由的时候触发</p>\r\n              <h5>请使用<kbd>F12</kbd> 查看console.log中的变化</h5>\r\n              <a [routerLink]=\"['/child5']\">child5</a>\r\n              <a [routerLink]=\"['/child6']\">child6</a>\r\n              <a [routerLink]=\"['/']\">清空</a>\r\n              <router-outlet></router-outlet>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
-/***/ 225:
+/***/ 240:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"panel panel-success\">\r\n  <div class=\"panel-heading\" role=\"tab\" id=\"headingTwo\">\r\n    <h4 class=\"panel-title\">\r\n      <a class=\"collapsed\"  data-toggle=\"collapse\" data-parent=\"#accordion\"  href=\"#collapseTwo\" aria-expanded=\"true\"\r\n         aria-controls=\"collapseTwo\">数据绑定</a>\r\n    </h4>\r\n  </div>\r\n  <div id=\"collapseTwo\" class=\"panel-collapse collapse\" role=\"tabpanel\" aria-labelledby=\"headingTwo\">\r\n    <div class=\"panel-body\">\r\n      <span>Angular里面的事件绑定： </span>\r\n      <button class=\"btn btn-default\" (click)=\"doOnClick($event)\">点我</button>\r\n      <hr>\r\n      <p>注意点1：<b>差值表达式</b>和<b>属性绑定</b>是相同的东西。如下示例</p>\r\n      <div class=\"row\">\r\n        <div class=\"col-md-4\">\r\n          <p>属性绑定1: <code>&lt;img [src]=\"imgUrl\" /&gt;</code></p>\r\n          <img [src]=\"imgUrl\"/>\r\n        </div>\r\n        <div class=\"col-md-4\">\r\n          <p>属性绑定2: <code> &lt;img src=<span>\"{{</span>imgUrl<span>}}\"</span>/&gt;</code></p>\r\n          <img src=\"{{imgUrl}}\"/>\r\n        </div>\r\n        <div class=\"col-md-4\">\r\n          <p>数据绑定3：html属性和DOM属性</p>\r\n          <input value=\"Tom\" (input)=\"doInput($event)\">\r\n          <button class=\"btn btn-default\" disabled>点我</button>\r\n          <hr>\r\n          <p>html属性和DOM属性的区别，模板绑定是通过DOM属性和事件来工作的不是HTML属性</p>\r\n          <p>插值表达式是DOM属性绑定</p>\r\n        </div>\r\n        <div class=\"col-md-6\">\r\n          <p>数据绑定4：<br>HTML属性绑定: <code>[attr.colspan]=\"tableColspan\"</code></p>\r\n          <p>CSS类绑定：<code>[class] [class.specail] [ngClass]=\"{{ '{' }}aaa:isA,bbb:isB{{ '}' }}\"</code></p>\r\n          <p>样式属性绑定：<code> [style.specail]=\"isSpecial?'red':'green'\" </code><br/>\r\n            <code>[ngStyle]=\"{{ '{' }}'font-style':this.canSave?'italic':'normal'{{ '}' }}\"</code></p>\r\n        </div>\r\n        <div class=\"col-md-6\">\r\n          <table class=\"table table-striped\">\r\n            <tr>\r\n              <td [attr.colspan]=\"size\">January</td>\r\n              <td>ABC</td>\r\n            </tr>\r\n            <tr>\r\n              <td colspan=\"2\">February</td>\r\n              <td>March</td>\r\n            </tr>\r\n            <tr>\r\n              <td colspan=\"1\">March</td>\r\n              <td>April</td>\r\n            </tr>\r\n          </table>\r\n        </div>\r\n        <div class=\"col-md-6\">\r\n          <p>html属性绑定：样式绑定</p>\r\n          <div [class]=\"divClass\">测试1</div>\r\n          <div class=\"a b \" [class.c]=\"isBig\">测试2</div>\r\n          <div [ngClass]=\"anotherDivClass\">测试3</div>\r\n        </div>\r\n        <div class=\"col-md-6\">\r\n          <p>html属性绑定：样式绑定</p>\r\n          <div [style.color]=\"isDev?'red':'blue'\">样式绑定</div>\r\n          <div [style.font-size.em]=\"isDev?1.5:1\">样式绑定2</div>\r\n          <div [ngStyle]=\"divStyle\">样式绑定3</div>\r\n        </div>\r\n        <div class=\"col-md-6\">\r\n          <p>双向数据绑定：</p>\r\n          <div class=\"form-inline\">\r\n            <div class=\"form-group\">\r\n              <input id=\"input1\" class=\"form-control\" [value]=\"name\" (input)=\"doOnInput($event)\">\r\n              <label for=\"input1\">{{name}}</label>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input id=\"input2\" class=\"form-control\" [(ngModel)]=\"name\">\r\n              <label for=\"input2\">{{name}}</label>\r\n            </div>\r\n          </div>\r\n        </div>\r\n        <div class=\"col-md-6\">\r\n          <p><b>RxJS</b>响应式:</p>\r\n          <div class=\"form-group\">\r\n          <input class=\"form-control\" #myField (keyup)=\"onKey(myField.value)\">\r\n          </div>\r\n          <p>响应式Demo:</p>\r\n          <div class=\"form-group\">\r\n            <input class=\"form-control\" [formControl]=\"searchInput\">\r\n          </div>\r\n        </div>\r\n        <div class=\"col-md-6\">\r\n          <p>管道Demo：负责处理原始值到显示值的转换</p>\r\n          <p>当前服务器时间戳(原始值)：{{birthday}}</p>\r\n          <p>显示的时间（date）：{{birthday | date}}</p>\r\n          <p>格式化时间（data:'yyyy-MM--dd HH:mm:ss'）{{birthday | date:'yyyy-MM--dd HH:mm:ss'}}</p>\r\n          <p>月份大写（uppercase）： {{birthday | date | uppercase}}</p>\r\n          <p>月份小写（lowercase）： {{birthday | date | lowercase}}</p>\r\n          <hr>\r\n          <p> 圆周率是：{{pi}}</p>\r\n          <p>格式化（二位整数二位小数）{{pi|number:'2.2-2'}}</p>\r\n        </div>\r\n        <div class=\"col-md-6\">\r\n          <p>自定义管道：如定义一个乘法的管道 输入命令 <kbd>ng g pipe pipe/multiple</kbd>创建管道</p>\r\n          <p>我自己定义的管道multiple ： {{mySize| multiple:'2'}}</p>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
-/***/ 226:
+/***/ 241:
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  child2 works!\n</p>\n"
+module.exports = "<p>\r\n  child2 works!\r\n</p>\r\n"
 
 /***/ }),
 
-/***/ 227:
+/***/ 242:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"wrapper\">\n  <h4>我是子组件</h4>\n  <ng-content select=\".header\"></ng-content>\n  <div>这个div定义在子组件中</div>\n  <ng-content select=\".footer\"></ng-content>\n</div>\n"
+module.exports = "<div class=\"wrapper\">\r\n  <h4>我是子组件</h4>\r\n  <ng-content select=\".header\"></ng-content>\r\n  <div>这个div定义在子组件中</div>\r\n  <ng-content select=\".footer\"></ng-content>\r\n</div>\r\n"
 
 /***/ }),
 
-/***/ 228:
+/***/ 243:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"child form-group\">\n  <h4>我是子组件</h4>\n  <div>问候语：{{greeting}}</div>\n  <div>姓名：{{user.name}}</div>\n  <div >消息：<input class=\"form-control\" [(ngModel)]=\"message\"></div>\n  <hr>\n  <h4>总结：</h4>\n  <p class=\"text-danger\">1.虽然user对象的name属性变化没有触发ngOnChanges方法,子组件的值也变了，得益于Angular的变更检测机制。</p>\n  <p class=\"text-danger\">2.注意：改变子组件的message没有触发ngOnChanges方法，因为子组件的message属性没有使用@Input装饰器来注解，不是一个输入属性，而ngOnChanges方法只有当输入属性变化是才被调用。</p>\n  <button class=\"btn btn-danger\" (click)=\"checkHandler()\" >触发</button>\n</div>\n"
+module.exports = "<div class=\"wrapper\">\n  <h4>我是另一个子组件</h4>\n  <div>这个div定义在子组件中</div>\n  <p>{{message}}</p><i>message可以改变</i>\n</div>\n"
 
 /***/ }),
 
-/***/ 229:
+/***/ 244:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"col-md-4\">\n  <h5>请使用<kbd>F12</kbd> 查看console.log中的变化</h5>\n</div>\n"
+module.exports = "<p>Child5 works</p>\n"
 
 /***/ }),
 
-/***/ 230:
+/***/ 245:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"col-md-4 subComponent\">\r\n  <h4>我是子组件 <small>接收父组件的Input的信息</small></h4>\r\n  <p>买 <code>{{amount}}</code>手<i><b>{{stockCode}}</b></i>股票</p>\r\n</div>\r\n"
+module.exports = "<p>\n  child6 works!\n</p>\n"
 
 /***/ }),
 
-/***/ 231:
+/***/ 246:
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"child form-group\">\r\n  <h4>我是子组件</h4>\r\n  <div>问候语：{{greeting}}</div>\r\n  <div>姓名：{{user.name}}</div>\r\n  <div >消息：<input class=\"form-control\" [(ngModel)]=\"message\"></div>\r\n  <hr>\r\n  <h4>总结：</h4>\r\n  <p class=\"text-danger\">1.虽然user对象的name属性变化没有触发ngOnChanges方法,子组件的值也变了，得益于Angular的变更检测机制。</p>\r\n  <p class=\"text-danger\">2.注意：改变子组件的message没有触发ngOnChanges方法，因为子组件的message属性没有使用@Input装饰器来注解，不是一个输入属性，而ngOnChanges方法只有当输入属性变化是才被调用。</p>\r\n  <button class=\"btn btn-danger\" (click)=\"checkHandler()\" >触发</button>\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ 247:
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"col-md-4\">\r\n  <h5>请使用<kbd>F12</kbd> 查看console.log中的变化</h5>\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ 248:
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"col-md-4 subComponent\">\n  <h4>我是子组件 <small>接收父组件的Input的信息</small></h4>\n  <p>买 <code>{{amount}}</code>手<i><b>{{stockCode}}</b></i>股票</p>\n</div>\n"
+
+/***/ }),
+
+/***/ 249:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"col-md-4 subComponent\">\r\n  <h4> 这是报价组件: <small>给父组件发送信息</small></h4>\r\n  <span> 股票代码是 <i><b>{{stockCode}}</b></i>,股票价格是 <code>{{price | number:'2.2-2'}}</code></span>\r\n  <input style=\"display: inline-block\" type=\"button\" class=\"btn btn-primary\" value=\"立即购买\"\r\n     (click)=\"buyStock($event)\" >\r\n  <button class=\"btn btn-sm btn-success\" (click)=\"taggleIt()\">{{isIntervalStop?'继续':'停止'}}</button>\r\n</div>\r\n"
 
 /***/ }),
 
-/***/ 232:
+/***/ 250:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"col-md-3\">\r\n  <h3 class=\"DI-title\"><small>商品详情1:</small></h3>\r\n  <p>名称：{{product.title}}</p>\r\n  <p>价格：{{product.price}}</p>\r\n  <p>描述：{{product.desc}}</p>\r\n</div>\r\n"
 
 /***/ }),
 
-/***/ 233:
+/***/ 251:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"col-md-3\">\r\n  <h3 class=\"DI-title\"><small>商品详情2:</small></h3>\r\n  <p>名称：{{product.title}}</p>\r\n  <p>价格：{{product.price}}</p>\r\n  <p>描述：{{product.desc}}</p>\r\n</div>\r\n"
 
 /***/ }),
 
-/***/ 38:
+/***/ 41:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__logger_service__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__logger_service__ = __webpack_require__(59);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProductService; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return Product; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1061,15 +1283,15 @@ var _a;
 
 /***/ }),
 
-/***/ 510:
+/***/ 520:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(132);
+module.exports = __webpack_require__(140);
 
 
 /***/ }),
 
-/***/ 56:
+/***/ 58:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1089,8 +1311,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var PriceQuoteComponent = (function () {
     function PriceQuoteComponent() {
         this.stockCode = "IBM";
-        this.lastPrice = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["r" /* EventEmitter */]();
-        this.buy = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["r" /* EventEmitter */]();
+        this.lastPrice = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["s" /* EventEmitter */]();
+        this.buy = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["s" /* EventEmitter */]();
         this.isIntervalStop = false;
         this.start();
     }
@@ -1124,18 +1346,18 @@ var PriceQuoteComponent = (function () {
     return PriceQuoteComponent;
 }());
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* Output */])('priceChange'),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["r" /* EventEmitter */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["r" /* EventEmitter */]) === "function" && _a || Object)
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* Output */])('priceChange'),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["s" /* EventEmitter */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["s" /* EventEmitter */]) === "function" && _a || Object)
 ], PriceQuoteComponent.prototype, "lastPrice", void 0);
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* Output */])('buyIt'),
-    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["r" /* EventEmitter */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["r" /* EventEmitter */]) === "function" && _b || Object)
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* Output */])('buyIt'),
+    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["s" /* EventEmitter */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["s" /* EventEmitter */]) === "function" && _b || Object)
 ], PriceQuoteComponent.prototype, "buy", void 0);
 PriceQuoteComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_3" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* Component */])({
         selector: 'app-price-quote',
-        template: __webpack_require__(231),
-        styles: [__webpack_require__(216)]
+        template: __webpack_require__(249),
+        styles: [__webpack_require__(231)]
     }),
     __metadata("design:paramtypes", [])
 ], PriceQuoteComponent);
@@ -1153,7 +1375,7 @@ var _a, _b;
 
 /***/ }),
 
-/***/ 57:
+/***/ 59:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1186,7 +1408,7 @@ LoggerService = __decorate([
 
 /***/ }),
 
-/***/ 83:
+/***/ 87:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1219,10 +1441,10 @@ var Child2Component = (function () {
     return Child2Component;
 }());
 Child2Component = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_3" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* Component */])({
         selector: 'app-child2',
-        template: __webpack_require__(226),
-        styles: [__webpack_require__(211)]
+        template: __webpack_require__(241),
+        styles: [__webpack_require__(223)]
     }),
     __metadata("design:paramtypes", [])
 ], Child2Component);
@@ -1231,5 +1453,5 @@ Child2Component = __decorate([
 
 /***/ })
 
-},[510]);
+},[520]);
 //# sourceMappingURL=main.bundle.js.map

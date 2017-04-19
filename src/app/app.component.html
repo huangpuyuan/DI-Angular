@@ -102,10 +102,23 @@
               <p>变更检测的策略：Default策略、OnPush策略</p>
             </div>
             <div class="col-md-4">
-              <h4>view钩子</h4>
+              <h4>视图钩子 <code>AfterViewInit/AfterViewChecked</code></h4>
               <app-child2 #child1></app-child2>
               <app-child2 #child2></app-child2>
               <button (click)="child2.greeting('Jerry')" class="btn btn-success">调用#child2</button>
+            </div>
+            <div class="col-md-4">
+              <h4>投影钩子<code>AfterContentInit/AfterContentChecked</code></h4>
+              <app-child4></app-child4>
+            </div>
+            <div class="col-md-4">
+              <h4>组件销毁 <code>ngOnDestory</code></h4>
+              <p class="bg-warning">在路由的时候触发</p>
+              <h5>请使用<kbd>F12</kbd> 查看console.log中的变化</h5>
+              <a [routerLink]="['/child5']">child5</a>
+              <a [routerLink]="['/child6']">child6</a>
+              <a [routerLink]="['/']">清空</a>
+              <router-outlet></router-outlet>
             </div>
           </div>
         </div>
