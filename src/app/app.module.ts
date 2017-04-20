@@ -25,6 +25,8 @@ import { Child6Component } from './child6/child6.component';
 import { TemplateFormComponent } from './template-form/template-form.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { ReactiveRegistComponent } from './reactive-regist/reactive-regist.component';
+import { MoblieValidatorDirective } from './directives/moblie-validator.directive';
+import { EqualValidatorDirective } from './directives/equal-validator.directive';
 
 
 var routeConfig: Routes = [
@@ -59,7 +61,9 @@ export function myFactory(logger: LoggerService, appConfig) {
     Child6Component,
     TemplateFormComponent,
     ReactiveFormComponent,
-    ReactiveRegistComponent
+    ReactiveRegistComponent,
+    MoblieValidatorDirective,
+    EqualValidatorDirective
   ],
   imports: [
     BrowserModule,

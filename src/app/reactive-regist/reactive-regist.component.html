@@ -2,50 +2,59 @@
   <h3 class="text-center">SPA表单三：
     <small>用响应式表单重构注册表单，<b>并实现表单校验</b></small>
   </h3>
-
   <div class="form-group">
-    <label for="user">用户名: </label>
-    <input id="user" formControlName="username" type="text" class="form-control">
-    <div [hidden]="!formModel.hasError('required','username')">
-      <p class="text-danger">用户名是必填项</p>
-    </div>
-    <div [hidden]="!formModel.hasError('minlength','username')">
-      <p class="text-danger">用户名最小长度是6</p>
+    <label for="user2">用户名: </label>
+    <input id="user2" formControlName="username" type="text"
+           [class.hasError]="formModel.get('username').invalid && formModel.get('username').touched" class="form-control">
+    <div [hidden]="formModel.get('username').valid || formModel.get('username').untouched">
+      <div [hidden]="!formModel.hasError('required','username')">
+        <p class="text-danger">用户名是必填项</p>
+      </div>
+      <div [hidden]="!formModel.hasError('minlength','username')">
+        <p class="text-danger">用户名最小长度是6</p>
+      </div>
     </div>
   </div>
   <div class="form-group">
-    <label for="phone">手机号: </label>
-    <input id="phone" formControlName="mobile" type="number" class="form-control">
-    <div [hidden]="!formModel.hasError('mobile','mobile')">
-      <p class="text-danger">请输入正确的手机号 <small>格式为11位13、15、18开头</small></p>
+    <label for="phone2">手机号: </label>
+    <input id="phone2" formControlName="mobile" type="number" class="form-control">
+    <div [hidden]="formModel.get('mobile').valid || formModel.get('mobile').pristine">
+      <div [hidden]="!formModel.hasError('mobile','mobile')">
+        <p class="text-danger">请输入正确的手机号 <small>格式为11位13、15、18开头</small></p>
+      </div>
+    </div>
+    <div [hidden]="!formModel.get('mobile').pending">
+      <p class="text-success">正在校验手机号合法性ing~~~</p>
     </div>
   </div>
   <div  formGroupName="passwordsGroup">
     <div class="form-group">
-      <label for="pwd">密码: </label>
-      <input id="pwd"  formControlName="password" type="password" class="form-control">
+      <label for="pwd2">密码: </label>
+      <input id="pwd2" formControlName="password" type="password" class="form-control">
       <div [hidden]="!formModel.hasError('minlength',['passwordsGroup','password'])">
         <p class="text-danger">密码最小长度是6</p>
       </div>
     </div>
     <div class="form-group">
-      <label for="pconfirm">确认密码: </label>
-      <input id="pconfirm" formControlName="pconfirm" type="password" class="form-control">
+      <label for="pconfirm2">确认密码: </label>
+      <input id="pconfirm2" formControlName="pconfirm" type="password" class="form-control">
     </div>
     <div [hidden]="!formModel.hasError('equal','passwordsGroup')">
-      <p class="text-danger">密码和确认密码不匹配</p>
+      <p class="text-danger">{{formModel.getError('equal','passwordsGroup')?.errorMes}}</p>
     </div>
   </div>
   <div class="checkbox">
-    <label>
-      <input type="checkbox" formControlName="checked" name="checks"> 同意
+    <label for="check">
+      <input id="check" type="checkbox" formControlName="checked" name="checks">
+      同意
     </label>
-    <div  [hidden]="!formModel.hasError('required','checked')">
+  </div>
+  <div [hidden]="!formModel.hasError('required','checked')||formModel.get('checked').untouched">
       <span class="text-danger">请勾选</span>
-    </div>
   </div>
   <button type="submit" class="btn btn-info">注册</button>
   <hr>
-
+  <div>{{formModel.status}}</div>
 </form>
+
 
