@@ -1,12 +1,15 @@
-import {Component, DoCheck, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
+import {Component, DoCheck, Input, OnChanges, OnDestroy, OnInit, SimpleChanges} from '@angular/core';
 
 @Component({
   selector: 'app-child',
   templateUrl: './child.component.html',
   styleUrls: ['./child.component.css']
 })
-export class ChildComponent implements OnInit, OnChanges, DoCheck {
+export class ChildComponent implements OnInit, OnChanges, DoCheck, OnDestroy {
 
+  ngOnDestroy(): void {
+    console.log("child组件被销毁");
+  }
 
   @Input()
   greeting: string;
@@ -28,8 +31,9 @@ export class ChildComponent implements OnInit, OnChanges, DoCheck {
   ngOnChanges(changes: SimpleChanges): void {
     console.log(JSON.stringify(changes, null, 2));
   }
+
   // 调用ngDoCheck钩子
-  checkHandler(){
+  checkHandler() {
     if (this.user.name !== this.oldUsername) {
       this.changeDetected = true;
       console.log("DoCheck:user.name" + this.oldUsername + "变为" + this.user.name);
@@ -45,10 +49,8 @@ export class ChildComponent implements OnInit, OnChanges, DoCheck {
   }
 
   ngDoCheck(): void {
-     // this.checkHandler();
+    // this.checkHandler();
   }
-
-
 
 
 }
