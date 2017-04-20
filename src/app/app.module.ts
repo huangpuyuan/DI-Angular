@@ -22,6 +22,9 @@ import {Child3Component} from './child3/child3.component';
 import {Child4Component} from './child4/child4.component';
 import {Child5Component} from './child5/child5.component';
 import { Child6Component } from './child6/child6.component';
+import { TemplateFormComponent } from './template-form/template-form.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { ReactiveRegistComponent } from './reactive-regist/reactive-regist.component';
 
 
 var routeConfig: Routes = [
@@ -53,7 +56,10 @@ export function myFactory(logger: LoggerService, appConfig) {
     Child3Component,
     Child4Component,
     Child5Component,
-    Child6Component
+    Child6Component,
+    TemplateFormComponent,
+    ReactiveFormComponent,
+    ReactiveRegistComponent
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,7 @@
 <div class="container">
   <div>
     <h2 class="page-header title">
-      <small>Angular2依赖注入、数据绑定、通讯、生命周期、构建和部署</small>
+      <small>Angular2依赖注入、数据绑定、通讯、生命周期、表单处理、构建和部署</small>
     </h2>
   </div>
   <div class="panel-group" id="accordion" aria-multiselectable="true">
@@ -64,7 +64,7 @@
              aria-controls="collapseFour">生命周期钩子</a>
         </h4>
       </div>
-      <div id="collapseFour" class="panel-collapse collapse in" aria-labelledby="headingFour">
+      <div id="collapseFour" class="panel-collapse collapse" aria-labelledby="headingFour">
         <div class="panel-body">
           <app-life class="row" [name]="title"></app-life>
           <div class="parent form-inline">
@@ -120,6 +120,24 @@
               <a [routerLink]="['/']">清空</a>
               <router-outlet></router-outlet>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-warning">
+      <div class="panel-heading" id="headingFive">
+        <h4 class="panel-title">
+          <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive"
+             aria-expanded="true"
+             aria-controls="collapseFive">表单处理</a>
+        </h4>
+      </div>
+      <div id="collapseFive" class="panel-collapse collapse in" aria-labelledby="headingFive">
+        <div class="panel-body ">
+          <div class="row">
+            <app-template-form></app-template-form>
+            <app-reactive-form></app-reactive-form>
+            <app-reactive-regist></app-reactive-regist>
           </div>
         </div>
       </div>

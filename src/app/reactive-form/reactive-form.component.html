@@ -1,0 +1,25 @@
+<form [formGroup]="formModel" (submit)="onSubmit()" class="col-md-6">
+  <h3 class="text-center">SPA表单二：
+    <small>响应式表单</small>
+  </h3>
+  <p>类：<code>FormControl, FormGroup，FormArray</code></p>
+  <p>指令：<code>formControl,formControlName,formGroup，formGroupName,formArray</code></p>
+  <div class="form-group form-inline" formGroupName="dateRange">
+    <label for="startDate">起始日期:</label>
+    <input type="date" class="form-control" id="startDate" formControlName="from">
+    <label for="endDate">截止日期:</label>
+    <input type="date" class="form-control" id="endDate" formControlName="to">
+  </div>
+  <div>
+    <ul class="form-group form-inline" formArrayName="emails">
+      <label>Emails:</label>
+      <li *ngFor="let e of this.formModel.get('emails').controls;let i=index;">
+        <label>{{i+1}}:&nbsp;</label><input type="email" class="form-control" [formControlName]="i"/>
+      </li>
+    </ul>
+    <button type="button" class="btn btn-info" (click)="addEmail()">增加Email</button>
+  </div>
+  <hr>
+  <button type="submit" class="btn btn-success">保存</button>
+</form>
+
