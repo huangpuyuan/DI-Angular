@@ -1,33 +1,51 @@
-<form #myForm="ngForm" (ngSubmit)="onSubmit(myForm.value)" class="col-md-7">
+<form [formGroup]="formModel" (ngSubmit)="onSubmit()" class="col-md-7">
   <h3 class="text-center">SPA表单三：
-    <small>用响应式表单重构注册表单</small>
+    <small>用响应式表单重构注册表单，<b>并实现表单校验</b></small>
   </h3>
+
   <div class="form-group">
     <label for="user">用户名: </label>
-    <input id="user" #username="ngModel" ngModel name="username" type="text" class="form-control">
+    <input id="user" formControlName="username" type="text" class="form-control">
+    <div [hidden]="!formModel.hasError('required','username')">
+      <p class="text-danger">用户名是必填项</p>
+    </div>
+    <div [hidden]="!formModel.hasError('minlength','username')">
+      <p class="text-danger">用户名最小长度是6</p>
+    </div>
   </div>
   <div class="form-group">
     <label for="phone">手机号: </label>
-    <input id="phone" ngModel name="mobile" type="number" class="form-control">
+    <input id="phone" formControlName="mobile" type="number" class="form-control">
+    <div [hidden]="!formModel.hasError('mobile','mobile')">
+      <p class="text-danger">请输入正确的手机号 <small>格式为11位13、15、18开头</small></p>
+    </div>
   </div>
-  <div ngModelGroup="passwordsGroup">
+  <div  formGroupName="passwordsGroup">
     <div class="form-group">
       <label for="pwd">密码: </label>
-      <input id="pwd" ngModel name="password" type="password" class="form-control">
+      <input id="pwd"  formControlName="password" type="password" class="form-control">
+      <div [hidden]="!formModel.hasError('minlength',['passwordsGroup','password'])">
+        <p class="text-danger">密码最小长度是6</p>
+      </div>
     </div>
     <div class="form-group">
       <label for="pconfirm">确认密码: </label>
-      <input id="pconfirm" ngModel name="pconfirm" type="password" class="form-control">
+      <input id="pconfirm" formControlName="pconfirm" type="password" class="form-control">
+    </div>
+    <div [hidden]="!formModel.hasError('equal','passwordsGroup')">
+      <p class="text-danger">密码和确认密码不匹配</p>
     </div>
   </div>
   <div class="checkbox">
     <label>
-      <input type="checkbox" ngModel name="checks"> 同意
+      <input type="checkbox" formControlName="checked" name="checks"> 同意
     </label>
+    <div  [hidden]="!formModel.hasError('required','checked')">
+      <span class="text-danger">请勾选</span>
+    </div>
   </div>
   <button type="submit" class="btn btn-info">注册</button>
   <hr>
-  <p>表单数据(json)：<br>{{myForm.value|json}}</p>
-  <p>用户名：{{username.value}}</p>
+
 </form>
 
